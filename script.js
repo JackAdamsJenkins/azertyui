@@ -30,6 +30,12 @@
 //     console.log("C'est bon t'es majeur")
 // }
 
+// Ternaire : if else condensé
+// qui à pour objectif d'attribuer une valeur à une variable
+// variable = (condition) ? valeur si vrai : valeur si faux
+// const age = 12
+// const information = age >= 18 ? "Majeur" : "Mineur"
+
 // // Boucles
 //     // compteur; condition; incrémentation/décrémentation
 // for(let i = 0; i < 100; i = i + 2){
@@ -84,10 +90,10 @@
 // }
 // sayHello("Matthieu")
 
-const h1 = document.querySelector('h1')
+// const h1 = document.querySelector('h1')
 
 // h1.innerHTML = "Totoo <br/> dfghjk;"
-h1.textContent = "Titi <br/> dfghjk;"
+// h1.textContent = "Titi <br/> dfghjk;"
 
 const monPremierArticle = `
         <article>
@@ -107,3 +113,23 @@ const monPremierArticle = `
         </article>
 `
 document.querySelector("body > section:nth-child(2)").insertAdjacentHTML("afterbegin", monPremierArticle)
+
+// beforebegin
+// afterbegin
+// beforeend
+// afterend
+
+const h1 = document.querySelector('h1')
+let count = 0
+const title = h1.textContent
+// h1.addEventListener('type événement à observer', fonction à lancer)
+h1.addEventListener('click', () => {
+    count++
+    h1.textContent = `${title} ${count}`
+})
+
+// localStorage.setItem("clé", valeur au format STRING)
+localStorage.setItem('prenom', "Jean-Louis")
+// localStorage.getItem("clé")
+const prenom = localStorage.getItem('prenom')
+console.log(prenom)
